@@ -1,0 +1,7 @@
+
+* No retain stack is necessary, since we can store the Factor stack in a lexically scoped PMC
+
+* Any function not inlined must have a constant stack effect, i.e. a fixed
+number of inputs and outputs.  Thus, it should be possible to map stack
+shuffling in between function calls into register/PMC moves/copies. In theory.
+Patches Welcome!
