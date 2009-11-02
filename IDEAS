@@ -9,3 +9,12 @@ Patches Welcome!
 * How to Parse Factor:
 
     http://docs.factorcode.org/content/article-parser-algorithm.html
+
+* The tokens or "parsing words" of Factor:
+
+    http://docs.factorcode.org/content/vocab-syntax.html
+
+    This is the default syntax that Factor comes with. These are what normal mortals call
+    "tokens" of other languages, but the Factor peeps call them "parsing words", because
+    they are words that can act at the level of the parser, changing syntax, defining new
+    words and changing the syntax of the language at a basic level.
