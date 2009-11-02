@@ -7,11 +7,14 @@ dup.pir -- simple implementation of a dup function
 =cut
 
 .namespace []
-    .local pmc stack
+.sub main
+    .global pmc stack
     stack = new 'ResizablePMCArray'
+.end
 
 .sub 'dup'
-    $P0 = stack[0]
+    $P0 = pop stack
+    push stack, $P0
     push stack, $P0
     .return ()
 .end
