@@ -52,6 +52,11 @@ unless (%config) {
 #  Create the Makefile using the information we just got
 create_makefiles(%config);
 
+print "\nYou can now type 'make' to build Kea.\n";
+print "You may also type 'make test' to run the Kea test suite.\n\n";
+
+print "Happy Hacking,\n\tThe Kea Team\n";
+
 sub read_parrot_config {
     my @parrot_config_exe = @_;
     my %config = ();
