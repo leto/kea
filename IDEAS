@@ -5,3 +5,7 @@
 number of inputs and outputs.  Thus, it should be possible to map stack
 shuffling in between function calls into register/PMC moves/copies. In theory.
 Patches Welcome!
+
+* How to Parse Factor:
+
+    http://docs.factorcode.org/content/article-parser-algorithm.html
