@@ -2,7 +2,7 @@
 
 =head1 NAME
 
-Configure.pl - a configure script for a high level language running on Parrot
+Configure.pl - The Configure script for Kea
 
 =head1 SYNOPSIS
 
@@ -39,11 +39,15 @@ my @parrot_config_exe = $opt_parrot_config
                           'parrot_config',
                         );
 
+
+print "Hello, I'm Configure. My job is to poke and prod\nyour system to figure out how to build Kea.\n\n";
+
 #  Get configuration information from parrot_config
 my %config = read_parrot_config(@parrot_config_exe);
 unless (%config) {
     die "Unable to locate parrot_config.";
 }
+
 
 #  Create the Makefile using the information we just got
 create_makefiles(%config);
