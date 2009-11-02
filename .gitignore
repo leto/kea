@@ -1,3 +1,11 @@
 *core
 *.bak
 \.*sw?
+
+# generated files
+Makefile
+kea.pbc
+src/gen_actions.pir
+src/gen_builtins.pir
+src/gen_grammar.pir
+
