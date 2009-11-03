@@ -10,6 +10,10 @@ Patches Welcome!
 
     http://docs.factorcode.org/content/article-parser-algorithm.html
 
+* Parrot Developer Doc about Parrot Abstract Syntax Trees (PASTs)
+
+    http://www.parrotcode.org/docs/pdd/pdd26_ast.html
+
 * The tokens or "parsing words" of Factor:
 
     http://docs.factorcode.org/content/vocab-syntax.html
