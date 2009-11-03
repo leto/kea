@@ -33,6 +33,9 @@ object.
     $P1.'language'('kea')
     $P1.'parsegrammar'('kea::Grammar')
     $P1.'parseactions'('kea::Grammar::Actions')
+
+    $P1.'commandline_banner'("Kea - Factor on Parrot Virtual Machine\n")
+    $P1.'commandline_prompt'('> ')
 .end
 
 =item main(args :slurpy)  :main
