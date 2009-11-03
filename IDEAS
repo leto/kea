@@ -14,6 +14,10 @@ Patches Welcome!
 
     http://www.parrotcode.org/docs/pdd/pdd26_ast.html
 
+* How to fiddle with your operators and precedence levels when using the Parrot Compiler Toolkit
+
+    http://www.parrotblog.org/2008/03/episode-7-operators-and-precedence.html
+
 * The tokens or "parsing words" of Factor:
 
     http://docs.factorcode.org/content/vocab-syntax.html
