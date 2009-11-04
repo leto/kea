@@ -1,0 +1,75 @@
+Some examples from pmichaud++ about implementing basic prefix math ops:
+
+$ cat kea
+#! nqp
+
+grammar Kea {
+
+    token TOP { <expr> }
+    
+    proto token expr { <...> }
+    rule expr:sym<+> { '+' <expr> <expr> }
+    rule expr:sym<-> { '-' <expr> <expr> }
+    rule expr:sym<*> { '*' <expr> <expr> }
+    rule expr:sym</> { '/' <expr> <expr> }
+
+    token expr:sym<value> { \d+ }
+
+}
+
+class KeaActions {
+    method TOP($/) { make $<expr>.ast }
+
+    method expr:sym<+>($/) { make $<expr>[0].ast + $<expr>[1].ast }
+    method expr:sym<->($/) { make $<expr>[0].ast - $<expr>[1].ast }
+    method expr:sym<*>($/) { make $<expr>[0].ast * $<expr>[1].ast }
+    method expr:sym</>($/) { make $<expr>[0].ast / $<expr>[1].ast }
+
+    method expr:sym<value>($/) { make +$/ }
+}
+
+my $match := Kea.parse('+ 3 * 2 4', :actions(KeaActions));
+
+say($match.ast);
+
+$ ./nqp kea
+11
+$ 
+
+
+$ cat kea
+#! nqp
+
+grammar Kea {
+
+    token TOP { <expr> }
+    
+    proto token expr { <...> }
+    rule expr:sym<+> { '+' <expr> <expr> }
+    rule expr:sym<-> { '-' <expr> <expr> }
+    rule expr:sym<*> { '*' <expr> <expr> }
+    rule expr:sym</> { '/' <expr> <expr> }
+
+    token expr:sym<value> { \d+ }
+
+}
+
+my $match := Kea.parse('+ 3 * 2 4');
+_dumper($match);
+
+$ ./nqp kea
+"VAR1" => PMC 'Regex;Match' => "+ 3 * 2 4" @ 0 {
+    <expr> => PMC 'Regex;Match' => "+ 3 * 2 4" @ 0 {
+        <expr> => ResizablePMCArray (size:2) [
+            PMC 'Regex;Match' => "3" @ 2,
+            PMC 'Regex;Match' => "* 2 4" @ 4 {
+                <expr> => ResizablePMCArray (size:2) [
+                    PMC 'Regex;Match' => "2" @ 6,
+                    PMC 'Regex;Match' => "4" @ 8
+                ]
+            }
+        ]
+    }
+}
+$ 
+

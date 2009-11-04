@@ -50,6 +50,7 @@ SOURCES := \
   kea.pir
 
 BUILTINS_PIR := \
+  src/builtins/dup.pir \
   src/builtins/say.pir
 
 DOCS := README

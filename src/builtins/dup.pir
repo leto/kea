@@ -8,14 +8,16 @@ dup.pir -- simple implementation of a dup function
 
 .namespace []
 .sub main
-    .global pmc stack
-    stack = new 'ResizablePMCArray'
+    #.global pmc stack
+    #stack = new 'ResizablePMCArray'
 .end
 
 .sub 'dup'
-    $P0 = pop stack
-    push stack, $P0
-    push stack, $P0
+    $P0   = new 'Integer'
+    $P0   = 42
+    say 'Dupe!'
+    #push stack, $P0
+    #push stack, $P0
     .return ()
 .end
 

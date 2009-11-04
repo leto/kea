@@ -22,7 +22,7 @@ token ws {
 }
 
 rule statement {
-    'say' <expression> [ ',' <expression> ]* ';'
+    'dup' <expression> [ ',' <expression> ]* ';'
     {*}
 }
 
