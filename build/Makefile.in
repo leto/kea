@@ -136,7 +136,7 @@ help:
 	@echo ""
 
 test: build
-	$(PERL) -I$(LIB_DIR)/tools/lib t/harness --bindir=$(BIN_DIR)
+	$(BIN_DIR)/nqp t/harness t/*.t
 
 # basic run for missing libs
 test-installable: installable
