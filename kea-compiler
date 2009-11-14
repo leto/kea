@@ -1,0 +1,19 @@
+#!nqp
+
+grammar Kea {
+
+    token TOP { <expr> }
+    
+    proto token expr { <...> }
+    rule expr:sym<+> {  <expr> <expr> '+' }
+    rule expr:sym<-> {  <expr> <expr> '-' }
+    rule expr:sym<*> {  <expr> <expr> '*' }
+    rule expr:sym</> {  <expr> <expr> '/' }
+
+    token expr:sym<value> { \d+ }
+
+}
+
+my $match := Kea.parse('2 4 * 8 +');
+_dumper($match);
+
