@@ -14,7 +14,7 @@
         },
         "copyright_holder" : "The Perl Foundation",
         "generated_by"     : "Jonathan 'Duke' Leto <jonathan@leto.net>",
-        "keywords"         : ["kea", "Perl", "Perl 6", "HLL"],
+        "keywords"         : ["kea", "factor", "stack-based", "HLL"],
         "description"      : "Kea is Factor, a practical stack language, on Parrot",
     },
     "instructions" : {
@@ -35,7 +35,7 @@
         }
     },
     "dependency-info"  : {
-        "provides"     : ["kea", "perl6"],
+        "provides"     : ["kea", "factor"],
         "requires"     : {
             "fetch"    : ["git"],
             "configure": ["parrot"],
