@@ -17,9 +17,3 @@ To install Kea:
 To Uninstall Kea:
     $ sudo parrot setup.pir uninstall
 
-
-DEVELOPERS-ONLY
-
-To generate new Plumage data
-    $ parrot setup.pir plumage > plumage/kea.json
-
