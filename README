@@ -1,3 +1,25 @@
 Kea - Factor on the Parrot Virtual Machine
 
 Factor is a practical dynamic stack language. Parrot is a Virtual Machine designed to run dynamic languages.
+
+To build Kea:
+    $ parrot setup.pir build
+
+To test Kea:
+    $ parrot setup.pir test
+
+To clean the Kea repo:
+    $ parrot setup.pir clean
+
+To install Kea:
+    $ sudo parrot setup.pir install
+
+To Uninstall Kea:
+    $ sudo parrot setup.pir uninstall
+
+
+DEVELOPERS-ONLY
+
+To generate new Plumage data
+    $ parrot setup.pir plumage > plumage/kea.json
+
