@@ -15,33 +15,30 @@
         "copyright_holder" : "Jonathan 'Duke' Leto <jonathan@leto.net>",
         "generated_by"     : "Jonathan 'Duke' Leto <jonathan@leto.net>",
         "keywords"         : ["kea", "factor", "stack-based", "HLL"],
-        "description"      : "Kea is Factor, a practical stack language, on Parrot",
+        "description"      : "Kea is Factor, a practical stack language, on Parrot"
     },
     "instructions" : {
         "fetch"    : {
             "type" : "repository"
         },
-        "configure": {
-            "type" : "none",
-        },
         "build"    : {
-            "type" : "make"
+            "type" : "parrot_setup"
         },
         "test"     : {
-            "type" : "make"
+            "type" : "parrot_setup"
         },
         "install"  : {
-            "type" : "make"
+            "type" : "parrot_setup"
         }
     },
     "dependency-info"  : {
         "provides"     : ["kea", "factor"],
         "requires"     : {
             "fetch"    : ["git"],
-            "configure": ["parrot"],
-            "build"    : ["parrot"],
-            "test"     : ["parrot"],
-            "install"  : ["parrot"],
+            "configure": [],
+            "build"    : [],
+            "test"     : [],
+            "install"  : [],
             "runtime"  : []
         }
     },
