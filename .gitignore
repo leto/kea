@@ -1,15 +1,16 @@
 *core
 *.bak
 \.*sw?
+*.patch
+*.tar.gz
 
 # generated files
-Makefile
-kea.pbc
-src/gen_actions.pir
-src/gen_builtins.pir
-src/gen_grammar.pir
-installable_kea
-kea.c
-kea.o
-
+gen_*.pir
+*.pbc
+*.c
+*.o
+*.obj
+*.exe
+*.iss
+installable_*
 
